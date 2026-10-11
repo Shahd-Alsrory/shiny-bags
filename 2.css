@@ -1,0 +1,479 @@
+:root{
+    --pink:#e84393;
+    
+}
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Popping",sans-serif;
+} */
+
+*{
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   outline: none; border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: .2s linear;
+}
+
+
+.log{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.log img{
+    width: 60px;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem;
+    background: rgba(255, 51, 153, .05);
+}
+.heading span{
+    color: var(--pink);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+  .btn:hover{
+    background: var(--pink);
+  }  
+
+header{
+    position:fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+header .logo span{
+    color:var(--pink);
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color: var(--pink);
+}
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color: var(--pink);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgrey;
+    background: url('img/17.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.page-login{
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(12, 12, 12, 0.2); 
+    color: rgb(20, 20, 20);
+    padding: 40px 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+.page-login h1{
+    font-size: 36px;
+    text-align: center;
+
+}
+.page-login .input-login{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 30px 0;
+}
+#btn{
+    /* background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+        outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; */
+   
+    
+     width: 30%;
+    height: 30px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px;
+    margin: 8px;
+}
+.input-login {
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+background-color: #666;
+
+       width: 20px;
+     background-color: transparent;
+    /* border: 2px solid rgba(12, 12, 12, 0.2);   */
+    color: rgb(20, 20, 20);
+    /* padding: 30px 40px; */
+    border-radius: 45px;
+    /* backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+
+}
+.input-login .btn{
+    width: 0%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.input-login input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(7, 7, 7, 0.2);
+    border-radius: 40px;
+    font-size: 16px;color: rgb(24, 22, 22);
+    padding: 20px 45px 20px 20px;
+}
+.input-login input::placeholder{
+    color: #1a1818;
+}
+.input-login i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.page-login .remember-login{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+}
+
+.remember-login label input{
+    accent-color: #fff;
+    margin-right: 3px;
+
+}
+.remember-login a{
+    counter-reset: #fff;
+    text-decoration: none;
+}
+
+.remember-login a:hover{
+    text-decoration: underline;
+}
+.page-login a .btn{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.page-login .registre{
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.registre p a{
+    color: #fff;
+    text-decoration: none;
+}
+.registre p a:hover{
+      text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    } 
+
+    header{
+           padding: 2rem;
+    }
+     section{
+           padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+}
+
+@media(max-width:768px){
+    
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position:absolute;
+        top:100%;left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0,100% 0,100% 100%, 0% 100%) ;
+    }
+     header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+     }
+     /* .home .content h3{
+        font-size: 5rem;
+     }
+     .home .content span{
+        font-size: 2.5rem;
+     }
+     .icons-container .icons h3{
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 2rem;
+}
+.icons-container .icons span{
+
+    font-size: 1.7rem;
+} */
+.page-login{
+    max-width: 350px;
+}
+
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+     /* scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden; */
+} 
+  .heading
+  {
+    font-size: 3rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    } 
+
+    header{
+           padding: 2rem;
+    }
+     section{
+           padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+}
+
+@media(max-width:768px){
+    
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position:absolute;
+        top:100%;left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0,100% 0,100% 100%, 0% 100%) ;
+    }
+     header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+     }
+     .home .content h3{
+        font-size: 5rem;
+     }
+     .home .content span{
+        font-size: 2.5rem;
+     }
+     .icons-container .icons h3{
+    /* color: #333;
+    padding-bottom: .5rem; */
+    font-size: 2rem;
+}
+.icons-container .icons span{
+
+    font-size: 1.7rem;
+}
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+     /* scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden; */
+} 
+  .heading
+  {
+    font-size: 3rem;
+  }
+
+}
